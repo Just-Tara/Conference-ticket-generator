@@ -1,4 +1,4 @@
- HEAD
+
 import React from "react";
 import logo from "./assets/logo-full.svg";
 import patternLine from "./assets/pattern-lines.svg";
