@@ -1,4 +1,4 @@
- HEAD
+ 
 import React, {useState} from "react"
 import logo from "./assets/logo-full.svg";
 import infoIcon from "./assets/icon-info.svg";
