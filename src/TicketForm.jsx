@@ -26,10 +26,6 @@ function TicketForm({ onSubmit }) {
         `File too large. Please upload a photo under 500KB.` }));
       return;
     }
-
-        
-{
-    }
     setError((prev) => ({ ...prev, avatar: "" }));
     setAvatarPreview(URL.createObjectURL(file));
   };
@@ -122,7 +118,7 @@ function TicketForm({ onSubmit }) {
             <div 
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
-                className="relative p-4 rounded-[10px] bg-white/5 border-2 border-dashed border-white/40 hover:border-white/60 transition"
+                className="relative p-4 rounded-[10px] bg-white/5 border-2 border-dashed focus:ring-white/40 border-white/40 hover:border-white/60 transition"
                 
             >{avatarPreview ? (
                 <div className="relative flex flex-col items-center space-y-3">
@@ -146,7 +142,7 @@ function TicketForm({ onSubmit }) {
                             text-gray-400 cursor-pointer">Change image
                         <input 
                             type="file" 
-                            accept="image/PNG, image/jpeg" 
+                            accept="image/png, image/jpeg" 
                             onChange={handleFileChange}
                             id="changeImage" 
                             className="hidden"
@@ -172,6 +168,7 @@ function TicketForm({ onSubmit }) {
                     type="file" 
                     id="avatar" 
                     accept="image/png, image/jpeg" 
+                    aria-describedby="avatar-error"
                     onChange={handleFileChange}
                     className="hidden"
                 />
@@ -179,11 +176,17 @@ function TicketForm({ onSubmit }) {
             )}
             </div>
             
-            {error.avatar ? <p 
+            {error.avatar ? <p id="avatar-error"
                 className="text-[#f37362ff] text-xs mt-2 flex mb-3">
-                <img className="mr-1.5 " src={infoIcon} alt="uploadingImage" 
+             <img
+                className={`mr-1.5 filter ${error.avatar ? "brightness-125 contrast-125" : "brightness-75"}`}
+                src={infoIcon}
+                alt="info"
             />
-                {error.avatar}</p> : <p className="text-xs flex mt-2 mb-2 text-gray-400"><img className="mr-1.5" src={infoIcon} alt="uploadingImage"/>Upload your photo (JPG or PNG, max size: 500KB).</p>} 
+
+
+
+                {error.avatar}</p> : <p  className="text-[10px] sm:text-[14px] flex mt-2 mb-2 text-gray-400"><img className="mr-1.5" src={infoIcon} alt="uploadingImage"/>Upload your photo (JPG or PNG, max size: 500KB).</p>} 
             
             
             <label 
@@ -196,12 +199,13 @@ function TicketForm({ onSubmit }) {
                 value={name} 
                 onChange={(e) => setName(e.target.value)} 
                 id="name"
+                aria-describedby="name-error"
                 className={`relative w-full
                 mt-2 p-[10px] rounded-[10px] bg-white/5 border ${ error.name ? "border-[#f37362ff]" : "border-white/25" } 
                 placeholder-grey-400 text-white focus:outline-none 
                 focus:ring-2 focus:ring-white/20 cursor-pointer`}
             />
-                {error.name && <p 
+                {error.name && <p id="name-error"
                 className="text-[#f37362ff] text-xs mt-2 flex mb-3"><img 
                 className="mr-1.5" src={infoIcon} alt="" /> 
                 {error.name}</p>} 
@@ -212,17 +216,18 @@ function TicketForm({ onSubmit }) {
                 className="float-left mt-2">Email Address
             </label>
             <input  
-                type="text" 
+                type="email" 
                 placeholder="example@email.com" 
                 value={email} 
                 onChange={(e) => setEmail(e.target.value)} 
                 id="emailAddress"
+                aria-describedby="email-error"
                 className={`relative w-full
                 mt-2 p-[10px] rounded-[10px] bg-white/5 border ${ error.email ? "border-[#f37362ff]" : "border-white/25" } 
                 placeholder-grey-400 text-white focus:outline-none 
                 focus:ring-2 focus:ring-white/20 cursor-pointer`}
             />
-                {error.email && <p 
+                {error.email && <p id="email-error"
                 className="text-[#f37362ff] text-xs mt-2 flex mb-3"><img 
                 className="mr-1.5" src={infoIcon} alt="" />{error.email}</p>} 
            
@@ -237,19 +242,21 @@ function TicketForm({ onSubmit }) {
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
                 id="Github-username"
+                aria-describedby="userName-error"
                 className={`relative w-full
                 mt-2 p-[10px] rounded-[10px] bg-white/5 border ${ error.userName ? "border-[#f37362ff]" : "border-white/25" } 
                 placeholder-grey-400 text-white focus:outline-none 
                 focus:ring-2 focus:ring-white/20 cursor-pointer`}
             />
-               {error.userName && <p 
+               {error.userName && <p id="userName-error"
                className="text-[#f37362ff] text-xs mt-2 flex"><img 
                className="mr-1.5" src={infoIcon} alt="" />{error.userName}</p>} 
           
 
             <button 
                 type="submit" 
-                className="relative w-full mt-6 py-3 bg-[#e16151ff] font-semibold transition hover:bg-[#e65845] rounded-[10px]">
+                className="relative w-full mt-6 py-3 bg-[#e16151ff] font-semibold transition hover:bg-[#e65845] rounded-[10px]" 
+                aria-label="Generate my conference ticket">
                 Generate My Ticket
             </button>
 
@@ -261,5 +268,4 @@ function TicketForm({ onSubmit }) {
 </div>
     )
 }
-
 export default TicketForm

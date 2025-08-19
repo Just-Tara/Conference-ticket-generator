@@ -46,40 +46,39 @@ function TicketReady({ name, email, userName, avatar }) {
           <div className="absolute inset-0 flex flex-col px-4 sm:px-6 mt-2 sm:mt-3 text-start">
             {/* Logo + Date */}
             <img src={logo} alt="" className="w-[120px] sm:w-[200px]" />
-            <p className="text-[10px] sm:text-xs text-gray-400 ml-6 sm:ml-12 mt-2">
+            <p className="text-[10px] sm:text-xs text-gray-400 ml-6 sm:ml-12 mt-2 tracking-widest sm:tracking-[0.2em]">
               Jan 31, 2025 / Austin, TX
             </p>
 
             {/* User Info */}
-            <div className="flex items-center justify-between mt-[25px] sm:mt-10">
-              
+            <div className="flex items-center mt-[25px] sm:mt-10 relative">
               <div className="flex items-center">
-                <img 
-                  src={avatar} 
-                  alt="avatar" 
-                  className="w-8 h-8  sm:w-12 sm:h-12 rounded-md object-cover" 
+                <img
+                  src={avatar}
+                  alt="avatar"
+                  className="w-8 h-8 sm:w-12 sm:h-12 rounded-md object-cover"
                 />
                 <div className="ml-2 sm:ml-3 text-left">
-                  <p className="font-semibold text-[12px]  sm:text-base">{name}</p>
+                  <p className="font-semibold text-[12px] sm:text-base">{name}</p>
                   <div className="flex items-center">
                     <img src={githubImage} alt="Github-icon" className="w-3 sm:w-4 mr-1" />
                     <p className="text-[11px] sm:text-sm text-gray-400">@{userName}</p>
-                  </div>
                 </div>
-                    </div>
-             
-             <div>
-             <p className=" text-gray-500 font-semibold text-[14px] sm:text-[16px] 
-                 [writing-mode:vertical-rl] rotate-0" >#01609</p>
-                </div>
-              
- 
-               </div>
               </div>
-              
-            
-         
-        </div>
+            </div>
+          </div>
+
+  
+  <p
+    className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 
+      text-gray-500 font-semibold text-[14px] sm:text-[16px] 
+      [writing-mode:vertical-rl]"
+  >
+    #01609
+  </p>
+</div>
+
+            </div>
       </div>
     </div>
   );
