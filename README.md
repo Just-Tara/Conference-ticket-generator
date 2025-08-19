@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Frontend Mentor - Conference ticket generator solution
 
 This is a solution to the [Conference ticket generator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/conference-ticket-generator-oq5gFIU12w). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
@@ -67,3 +68,17 @@ Users should be able to:
 -  Website - [Just-Tara](https://github.com/Just-Tara)   
 - Frontend Mentor - [@Just-Tara](https://www.frontendmentor.io/profile/Just-Tara)  
 - Twitter - [@J_Tara_](https://www.twitter.com/J_Tara_)  
+=======
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+>>>>>>> b43c897 (Created the ticket generator form page and generator's page)
