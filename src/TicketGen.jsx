@@ -138,15 +138,16 @@ function TicketReady({ name, email, userName, avatar }) {
             </p>
 
             {/* User Info */}
-            <div className="flex items-center justify-between mt-6 sm:mt-10">
+            <div className="flex items-center justify-between mt-[25px] sm:mt-10">
+              
               <div className="flex items-center">
                 <img 
                   src={avatar} 
                   alt="avatar" 
-                  className="w-9 h-9 xs sm:w-12 sm:h-12 rounded-md object-cover" 
+                  className="w-8 h-8  sm:w-12 sm:h-12 rounded-md object-cover" 
                 />
                 <div className="ml-2 sm:ml-3 text-left">
-                  <p className="font-semibold text-[13px] sm:text-base">{name}</p>
+                  <p className="font-semibold text-[12px]  sm:text-base">{name}</p>
                   <div className="flex items-center">
                     <img src={githubImage} alt="Github-icon" className="w-3 sm:w-4 mr-1" />
                     <p className="text-[11px] sm:text-sm text-gray-400">@{userName}</p>
@@ -154,8 +155,10 @@ function TicketReady({ name, email, userName, avatar }) {
                 </div>
                     </div>
              
-             
-    <p className=" text-gray-500 font-semibold text-[14px] sm:text-[16px]  [writing-mode:vertical-rl] rotate-0" >#01609</p>
+             <div>
+             <p className=" text-gray-500 font-semibold text-[14px] sm:text-[16px] 
+                 [writing-mode:vertical-rl] rotate-0" >#01609</p>
+                </div>
               
  
                </div>
