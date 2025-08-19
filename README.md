@@ -36,15 +36,18 @@ Users should be able to:
 
 ### Screenshot
 
-[Desktop Form Preview](./assets/desktop-form-image.png)
-[Desktop Ticket Preview](./assets/desktop-ticket-image.png)
-[Mobile Form Preview](./assets/mobile-form-image.png)
-[Mobile Ticket Preview](./assets/mobile-ticket-image.png)
+### Screenshot
+
+![Desktop Form Preview](./assets/desktop-form-image.png)
+![Desktop Ticket Preview](./assets/desktop-ticket-image.png)
+![Mobile Form Preview](./assets/mobile-form-image.png)
+![Mobile Ticket Preview](./assets/mobile-ticket-image.png)
 
 ### Links
 
-- Solution URL: [](https://github.com/Just-Tara/Conference-ticket-generator)  
-- Live Site URL: [](https://conference-ticket-generator-brown-ten.vercel.app/)  
+- Solution URL: [GitHub Repository](https://github.com/Just-Tara/Conference-ticket-generator)  
+- Live Site URL: [View Live Site](https://conference-ticket-generator-brown-ten.vercel.app/)
+  
 
 ## My process
 
