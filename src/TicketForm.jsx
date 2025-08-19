@@ -296,7 +296,7 @@ function TicketForm({ onSubmit }) {
         `File too large. Please upload a photo under 500KB.` }));
       return;
     }
-    
+
         
 {
     }
@@ -329,7 +329,12 @@ function TicketForm({ onSubmit }) {
 
         if (!name.trim()) newErrors.name = "Please fill in your name"; 
 
-        if (!email.trim()) newErrors.email= "Please enter a valid email address"; 
+        if (!email.trim()) {newErrors.email= "Please enter your email address";} else{
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                newErrors.email = "Please enter a valid email address";
+            }
+        } 
         
         if (!userName.trim()) newErrors.userName = "Please fill in your Github Username"; 
             
@@ -487,7 +492,7 @@ function TicketForm({ onSubmit }) {
                 placeholder-grey-400 text-white focus:outline-none 
                 focus:ring-2 focus:ring-white/20 cursor-pointer`}
             />
-                {error.email && <p 
+                {error.email &&  <p 
                 className="text-[#f37362ff] text-xs mt-2 flex mb-3"><img 
                 className="mr-1.5" src={infoIcon} alt="" />{error.email}</p>} 
            
