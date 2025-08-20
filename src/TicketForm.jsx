@@ -121,7 +121,7 @@ function TicketForm({ onSubmit }) {
             <div 
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
-                className="relative p-6 rounded-[10px] bg-white/5 border-2 border-dashed focus:ring-white/40 border-white/40 hover:border-white/60 transition"
+                className="relative p-6 rounded-[10px] bg-white/10 border-2 border-dashed focus:ring-white/40 border-white/40 hover:border-white/60 transition"
                 
             >{avatarPreview ? (
                 <div className="relative flex flex-col items-center space-y-3">
@@ -203,8 +203,8 @@ function TicketForm({ onSubmit }) {
                 onChange={(e) => setName(e.target.value)} 
                 id="name"
                 aria-describedby="name-error"
-                className={`relative w-full
-                mt-2 p-[10px] rounded-[10px] bg-white/5 border ${ error.name ? "border-[#f37362ff]" : "border-white/25" } 
+                className={`relative w-full b
+                mt-2 p-[10px] rounded-[10px] bg-white/10 border ${ error.name ? "border-[#f37362ff]" : "border-white/25" } 
                 placeholder-grey-400 text-white focus:outline-none 
                 focus:ring-2 focus:ring-white/20 cursor-pointer`}
             />
@@ -226,7 +226,7 @@ function TicketForm({ onSubmit }) {
                 id="emailAddress"
                 aria-describedby="email-error"
                 className={`relative w-full
-                mt-2 p-[10px] rounded-[10px] bg-white/5 border ${ error.email ? "border-[#f37362ff]" : "border-white/25" } 
+                mt-2 p-[10px] rounded-[10px] bg-white/10 border ${ error.email ? "border-[#f37362ff]" : "border-white/25" } 
                 placeholder-grey-400 text-white focus:outline-none 
                 focus:ring-2 focus:ring-white/20 cursor-pointer`}
             />
@@ -247,7 +247,7 @@ function TicketForm({ onSubmit }) {
                 id="Github-username"
                 aria-describedby="userName-error"
                 className={`relative w-full
-                mt-2 p-[10px] rounded-[10px] bg-white/5 border ${ error.userName ? "border-[#f37362ff]" : "border-white/25" } 
+                mt-2 p-[10px] rounded-[10px] bg-white/10 border ${ error.userName ? "border-[#f37362ff]" : "border-white/25" } 
                 placeholder-grey-400 text-white focus:outline-none 
                 focus:ring-2 focus:ring-white/20 cursor-pointer`}
             />
