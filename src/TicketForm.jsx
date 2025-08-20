@@ -121,7 +121,7 @@ function TicketForm({ onSubmit }) {
             <div 
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
-                className="relative p-4 rounded-[10px] bg-white/5 border-2 border-dashed focus:ring-white/40 border-white/40 hover:border-white/60 transition"
+                className="relative p-6 rounded-[10px] bg-white/5 border-2 border-dashed focus:ring-white/40 border-white/40 hover:border-white/60 transition"
                 
             >{avatarPreview ? (
                 <div className="relative flex flex-col items-center space-y-3">
@@ -162,7 +162,7 @@ function TicketForm({ onSubmit }) {
                 <img 
                     src={uploadImage} 
                     alt="uploading-icon" 
-                    className="cursor-pointer" 
+                    className="cursor-pointer p-1 bg-white/20 h-10 object-cover rounded-[10px] border-2 border-white/20" 
                 />
                 <p className="text-sm cursor-pointer text-gray-400">
                     Drag and Drop or click to upload
