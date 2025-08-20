@@ -99,12 +99,12 @@ function TicketForm({ onSubmit }) {
     
         <header className="w-full max-w-screen-md  text-center text-white">
              <h2 
-                className="flex justify-center mt-7 "><img 
+                className="flex justify-center mt-12 "><img 
                 src={logo } alt="ticket-logo" />
             </h2>
-            <h1 className="text-[40px] font-[800] mt-[60px] leading-snug tracking-wider mb-2">Your Journey to Conding Comf 2025 Starts Here</h1>
+            <h1 className="text-[30px] lg:text-[46px] sm:text-[40px] font-[800] mt-[60px] leading-snug tracking-wider mb-2">Your Journey to Conding Comf 2025 Starts Here</h1>
 
-            <p className="text-[22px] text-gray-400 mb-5">Secure your spot at next year's biggest coding conference.</p>
+            <p className="text-[19px] sm:text-[22px] text-gray-400 mb-5">Secure your spot at next year's biggest coding conference.</p>
             
         </header>
         
@@ -258,7 +258,7 @@ function TicketForm({ onSubmit }) {
 
             <button 
                 type="submit" 
-                className="relative w-full mt-7 py-3 bg-[#e16151ff] font-semibold transition hover:bg-[#e65845] rounded-[10px]" 
+                className="relative w-full mt-7 py-3 text-black bg-[#e16151ff] font-[600] transition hover:bg-[#e65845] rounded-[10px]" 
                 aria-label="Generate my conference ticket">
                 Generate My Ticket
             </button>
