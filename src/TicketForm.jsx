@@ -78,26 +78,35 @@ function TicketForm({ onSubmit }) {
 
 
     return(
-    <div className="min-h-screen flex items-center justify-center relative
+    <main className="min-h-screen flex flex-col items-center justify-center relative
     bg-[url('./assets/background-desktop.png')] bg-cover bg-center">
-        <img src={patternLine} alt="pattern-line"className="brightness-55 absolute inset-0 w-full h-full object-cover" />
+        <img src={patternLine} alt="pattern-line" aria-hidden="true" className="brightness-55 absolute inset-0 w-full h-full object-cover" />
        
-        <img src={patternLineTop} alt="top-pattern-line" className="absolute top-10 right-0 w-[50%] max-w-[300px]" />
+        <img src={patternLineTop} alt="top-pattern-line" aria-hidden="true" className="absolute top-10 right-0 w-[50%] max-w-[300px]" />
        
        
        
         <img src={patterCircle} alt="circle-pattern" className="absolute top-[-100px] left-2 translate-x-2 brightness-50" />
 
-        <img src={patternLineBottom} alt="tablet-bottom-pattern-line"  className="absolute bottom-0 left-0 w-[60%] max-w-[700px] object-cover hidden sm:block lg:hidden"/>
-        <img src={patternLineBottom} alt="desktop-bottom-pattern-line"  className="absolute bottom-0 left-0 w-[60%] max-w-[700px] object-cover hidden lg:block"/>
+        <img src={patternLineBottom} alt="tablet-bottom-pattern-line" aria-hidden="true" className="absolute bottom-0 left-0 w-[60%] max-w-[700px] object-cover hidden sm:block lg:hidden"/>
+        <img src={patternLineBottom} alt="desktop-bottom-pattern-line" aria-hidden="true" className="absolute bottom-0 left-0 w-[60%] max-w-[700px] object-cover hidden lg:block"/>
 
-        <img src={mobilePatternBottom} alt="moblie-view-pattern" className="absolute bottom-0 left-0 w-[60%] max-w-[700px] sm:hidden" />
+        <img src={mobilePatternBottom} alt="moblie-view-pattern" aria-hidden="true" className="absolute bottom-0 left-0 w-[60%] max-w-[700px] sm:hidden" />
         
-        <img src={patterCircle} alt="circle-pattern" className="absolute right-[5%] brightness-60"/> 
+        <img src={patterCircle} alt="circle-pattern" aria-hidden="true" className="absolute right-[5%] brightness-60"/> 
         
 
     
-        
+        <header className="w-full max-w-screen-md  text-center text-white">
+             <h2 
+                className="flex justify-center mt-7 "><img 
+                src={logo } alt="ticket-logo" />
+            </h2>
+            <h1 className="text-[40px] font-[800] mt-[60px] leading-snug tracking-wider mb-2">Your Journey to Conding Comf 2025 Starts Here</h1>
+
+            <p className="text-[22px] text-gray-400 mb-5">Secure your spot at next year's biggest coding conference.</p>
+            
+        </header>
         
         <form 
             onSubmit={handleSubmit} 
@@ -105,14 +114,7 @@ function TicketForm({ onSubmit }) {
             id="submitForm"> 
         
             
-            <h2 
-                className="flex justify-center"><img 
-                src={logo } alt="ticket-logo" />
-            </h2>
-            <h1 className="text-2xl font-bold leading-snug mb-2">Your Journey to Conding Comf 2025 Starts Here</h1>
-
-            <p className="text-sm text-gray-300 mb-5">Secure your spot at next year's biggest coding conference.</p>
-            
+           
 
             <label htmlFor="uploadingImage" className="flex mb-3">Upload Image</label>
             
@@ -214,7 +216,7 @@ function TicketForm({ onSubmit }) {
 
              <label 
                 htmlFor="emailAddress"
-                className="float-left mt-4 mb-2">Email Address
+                className="float-left mt-5 mb-2">Email Address
             </label>
             <input  
                 type="email" 
@@ -235,7 +237,7 @@ function TicketForm({ onSubmit }) {
 
              <label 
                 htmlFor="Github-username" 
-                className="float-left mt-4 mb-2"> Github Username
+                className="float-left mt-5 mb-2"> Github Username
             </label>
             <input 
                 type="text" 
@@ -266,7 +268,7 @@ function TicketForm({ onSubmit }) {
         </form>
        
         
-</div>
+</main>
     )
 }
 export default TicketForm

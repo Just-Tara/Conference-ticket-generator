@@ -10,15 +10,15 @@ import githubImage from "./assets/icon-github.svg";
 
 function TicketReady({ name, email, userName, avatar }) {
   return (
-    <div className="min-h-screen flex items-center justify-center 
+    <main className="min-h-screen flex items-center justify-center 
       bg-[url('./assets/background-desktop.png')] bg-cover bg-center relative overflow-hidden">
       
       {/* Background Patterns */}
-      <img src={patternLine} alt="pattern-line" className="brightness-55 absolute inset-0 w-full h-full object-cover" />
-      <img src={patternLineTop} alt="top-pattern-line" className="absolute top-6 right-0 w-[40%] sm:w-[50%] max-w-[250px]" />
-      <img src={patternLineBottom} alt="bottom-pattern-line" className="absolute bottom-0 left-0 w-[70%] sm:w-[60%] max-w-[500px] object-cover" />
-      <img src={patterCircle} alt="circle-pattern" className="absolute top-[-50px] left-4 w-[120px] sm:w-[160px] brightness-50" />
-      <img src={patterCircle} alt="circle-pattern" className="absolute right-[5%] w-[120px] sm:w-[160px] brightness-50" />
+      <img src={patternLine} alt="pattern-line" aria-hidden="true" className="brightness-55 absolute inset-0 w-full h-full object-cover" />
+      <img src={patternLineTop} alt="top-pattern-line" aria-hidden="true"  className="absolute top-6 right-0 w-[40%] sm:w-[50%] max-w-[250px]" />
+      <img src={patternLineBottom} alt="bottom-pattern-line" aria-hidden="true" className="absolute bottom-0 left-0 w-[70%] sm:w-[60%] max-w-[500px] object-cover" />
+      <img src={patterCircle} alt="circle-pattern" aria-hidden="true" className="absolute top-[-50px] left-4 w-[120px] sm:w-[160px] brightness-50" />
+      <img src={patterCircle} alt="circle-pattern" aria-hidden="true" className="absolute right-[5%] w-[120px] sm:w-[160px] brightness-50" />
 
     
       <div className="w-full max-w-md p-6 sm:p-8 text-center text-white mt-[-60px] sm:mt-[-100px] relative z-10">
@@ -38,7 +38,7 @@ function TicketReady({ name, email, userName, avatar }) {
         </header>
 
         {/* Ticket Container */}
-        <main className="relative w-[85%] sm:w-[400px] mx-auto">
+        <section className="relative w-[85%] sm:w-[400px] mx-auto">
           {/* Ticket Background */}
           <img src={ticketContainer} alt="ticket-container" className="w-full h-auto" />
 
@@ -78,9 +78,9 @@ function TicketReady({ name, email, userName, avatar }) {
   </p>
 </div>
 
-            </main>
+            </section>
       </div>
-    </div>
+    </main>
   );
 }
 
