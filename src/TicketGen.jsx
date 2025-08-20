@@ -20,10 +20,10 @@ function TicketReady({ name, email, userName, avatar }) {
       <img src={patterCircle} alt="circle-pattern" className="absolute top-[-50px] left-4 w-[120px] sm:w-[160px] brightness-50" />
       <img src={patterCircle} alt="circle-pattern" className="absolute right-[5%] w-[120px] sm:w-[160px] brightness-50" />
 
-      {/* Main Content */}
+    
       <div className="w-full max-w-md p-6 sm:p-8 text-center text-white mt-[-60px] sm:mt-[-100px] relative z-10">
         {/* Heading */}
-        <div className="mb-8 sm:mb-12">
+        <header className="mb-8 sm:mb-12">
           <p className="flex justify-center mb-6">
             <img src={logo} alt="Logo-Image" className="w-[140px] sm:w-[180px]" />
           </p>
@@ -35,10 +35,10 @@ function TicketReady({ name, email, userName, avatar }) {
             We've emailed your ticket to 
             <span className="text-[#f37362]"> {email}</span> and will send updates in the run up to he event.
           </p>
-        </div>
+        </header>
 
         {/* Ticket Container */}
-        <div className="relative w-[85%] sm:w-[400px] mx-auto">
+        <main className="relative w-[85%] sm:w-[400px] mx-auto">
           {/* Ticket Background */}
           <img src={ticketContainer} alt="ticket-container" className="w-full h-auto" />
 
@@ -78,7 +78,7 @@ function TicketReady({ name, email, userName, avatar }) {
   </p>
 </div>
 
-            </div>
+            </main>
       </div>
     </div>
   );

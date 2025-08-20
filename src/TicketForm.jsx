@@ -103,17 +103,18 @@ function TicketForm({ onSubmit }) {
             onSubmit={handleSubmit} 
             className="w-full max-w-md p-8  text-center text-white"
             id="submitForm"> 
+        
             
             <h2 
                 className="flex justify-center"><img 
-                src={logo } alt="" />
+                src={logo } alt="ticket-logo" />
             </h2>
-       <h1 className="text-2xl font-bold leading-snug mb-2">Your Journey to Conding Comf 2025 Starts Here</h1>
+            <h1 className="text-2xl font-bold leading-snug mb-2">Your Journey to Conding Comf 2025 Starts Here</h1>
 
             <p className="text-sm text-gray-300 mb-5">Secure your spot at next year's biggest coding conference.</p>
             
 
-            <label htmlFor="uploadingImage" className="flex">Upload Image</label>
+            <label htmlFor="uploadingImage" className="flex mb-3">Upload Image</label>
             
             <div 
                 onDrop={handleDrop}
@@ -186,12 +187,12 @@ function TicketForm({ onSubmit }) {
 
 
 
-                {error.avatar}</p> : <p  className="text-[10px] sm:text-[14px] flex mt-2 mb-2 text-gray-400"><img className="mr-1.5" src={infoIcon} alt="uploadingImage"/>Upload your photo (JPG or PNG, max size: 500KB).</p>} 
+                {error.avatar}</p> : <p  className="text-[10px] flex mt-2 mb-2 text-gray-400"><img className="mr-1.5" src={infoIcon} alt="uploadingImage"/>Upload your photo (JPG or PNG, max size: 500KB).</p>} 
             
             
             <label 
                 htmlFor="name" 
-                className="float-left"
+                className="float-left mt-3 mb-2"
             >Full Name</label>
             <input 
                 type="text" 
@@ -213,7 +214,7 @@ function TicketForm({ onSubmit }) {
 
              <label 
                 htmlFor="emailAddress"
-                className="float-left mt-2">Email Address
+                className="float-left mt-4 mb-2">Email Address
             </label>
             <input  
                 type="email" 
@@ -234,7 +235,7 @@ function TicketForm({ onSubmit }) {
 
              <label 
                 htmlFor="Github-username" 
-                className="float-left mt-2"> Github Username
+                className="float-left mt-4 mb-2"> Github Username
             </label>
             <input 
                 type="text" 
@@ -255,7 +256,7 @@ function TicketForm({ onSubmit }) {
 
             <button 
                 type="submit" 
-                className="relative w-full mt-6 py-3 bg-[#e16151ff] font-semibold transition hover:bg-[#e65845] rounded-[10px]" 
+                className="relative w-full mt-7 py-3 bg-[#e16151ff] font-semibold transition hover:bg-[#e65845] rounded-[10px]" 
                 aria-label="Generate my conference ticket">
                 Generate My Ticket
             </button>
